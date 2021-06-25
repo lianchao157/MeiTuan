@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.meituan.demo.mapper.MeiTuan_mapper">
+    <select id="selectall" parameterType="java.lang.String"
+            resultType="com.meituan.demo.bean.Meituan_Menum_TitleBean">
+        SELECT *
+        FROM meituan_menymtitle
+    </select>
+
+
+</mapper>
+        <!--on DUPLICATE key update userid=userid+values(userid) -->
+
+        <!--<if test="menumtype == null">-->
+
+        <!--</if>-->

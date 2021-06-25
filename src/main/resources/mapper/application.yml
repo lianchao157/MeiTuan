@@ -1,0 +1,38 @@
+gitee:
+    oauth:
+      client_id: 984cb22249ebd896c444
+      client_secret: 728b34840f8d5d5e49ac0870adccf0804dc98445
+      redirect_uri: http://127.0.0.1:8887/callback
+
+      logging:
+        level:
+          life.majiang.community.mapper: debug
+
+      mybatis:
+        configuration:
+          map-underscore-to-camel-case: true
+
+#eaf58216baf68f414e083c0d3a2d10d0fcf97d1d8e0da77d0cfed18f8857edc6
+#server:
+#  port: 8888
+#  spring:
+#   profiles:
+#   active: prod
+#   激活环境
+#---
+#server:
+# port: 8883
+#spring:
+# profiles: dev
+#---
+#server:
+# port: 8883
+# spring:
+#  profiles:  prod
+#---
+mybatis:
+  #mapper-locations : classpath*:cn/**/*.xml
+  #指向mapper的xml文件位置
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+
