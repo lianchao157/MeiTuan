@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+git remote add origin https://github.com/lianchaolc/MeiTuanService.git
 
+        git remote add origin git@github.com:alexnest/mmall.git
 @RestController
 public class MeiTuan_TitleController {
     @Autowired(required = true)
