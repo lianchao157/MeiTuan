@@ -2,10 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.LoginMapper">
     <select id="loginaction" parameterType="java.lang.String"
-            resultType="com.example.demo.bean.User">
+            resultType="com.meituan.demo.bean.User">
         SELECT *
-        FROM userinforbyweb
-        WHERE username =#{username} AND usertel = #{usertel}
+        FROM userinfobyweb
+        WHERE username = #{username} AND usertel = #{usertel}
     </select>
+
+    <select id="findByUsernametest"  parameterType="java.lang.String" resultType="com.meituan.demo.bean.User">
+        SELECT *
+        FROM userinfobyweb
+        WHERE
+            username = #{username}
+    </select>
+    <select id="findUserById"  parameterType="java.lang.String" resultType="com.meituan.demo.bean.User">
+        SELECT *
+        FROM userinfobyweb
+        WHERE
+            username = #{username}
+    </select>
+
 </mapper>
         <!--on DUPLICATE key update userid=userid+values(userid) -->

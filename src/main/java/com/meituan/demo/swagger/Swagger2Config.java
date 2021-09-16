@@ -51,5 +51,7 @@ public class Swagger2Config {
 ////    http://localhost:8888/swagger-ui.html
 //    NAVL-RA7J-SJBQ-A6YR
 //    NAVK-F2YP-BMOW-3UFT
-    //    http://localhost:8080/swagger-ui.html
+    //    http://localhost:8082/swagger-ui.html
+//    http://localhost:8086/swagger-ui.html
+
 }

@@ -9,6 +9,6 @@ import java.util.List;
 @Repository
 public interface MeiTuan_mapper {
 
-    @Select("select * from meituan_menymtitle")
+    @Select("select * from meituan_menumtop")
     List<Meituan_Menum_TitleBean> selectall();//  查询所有
 }

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.meituan.demo.mapper.MeiTuan_ShopCarMapepr">
+    <insert id="Insertshopcar" parameterType="java.util.List">
+        INSERT INTO shop_car (shopcar_id, user_carid, shopcardingdan, shopcarname,
+                              shopcarcounts, shopcarprice, shopcarimage, shopcaryuliu,
+                              shopcar_money, shopcaryuliu0, column_11)
+        VALUES (
+            #{shopcar_id},
+            #{user_carid},
+            #{shopcardingdan},
+            #{shopcarname},
+            #{shopcarcounts},
+            #{shopcarprice},
+            #{shopcarimage},
+            #{shopcaryuliu},
+            #{shopcar_money},
+            #{shopcaryuliu0},
+            #{column_11}
+        )
+    </insert>
+    <!--插入数据可用-->
+    <insert id="inserlist" parameterType="java.util.List">
+        INSERT INTO shop_car (shopcar_id, user_carid,shopcardingdan, shopcarname,
+        shopcarcounts,shopcarprice,shopcarimage,shopcaryuliu,
+        shopcar_money,shopcaryuliu0,column_11)
+        VALUES
+        <foreach collection="list" item="item" separator="," index="index">
+            ( #{item.shopcar_id},
+            #{item.user_carid},
+            #{item.shopcardingdan},
+            #{item.shopcarname},
+            #{item.shopcarcounts},
+            #{item.shopcarprice},
+            #{item.shopcarimage},
+            #{item.shopcaryuliu},
+            #{item.shopcar_money},
+            #{item.shopcaryuliu0},
+            #{item.column_11})
+        </foreach>
+
+    </insert>
+    <!--批量插入数据库-->
+
+    <insert id="insershopcarlist" parameterType="java.util.List">
+        INSERT INTO shop_car (shopcar_id, user_carid,shopcardingdan, shopcarname,
+        shopcarcounts,shopcarprice,shopcarimage,shopcaryuliu,
+        shopcar_money,shopcaryuliu0,column_11)
+        VALUES
+        <foreach collection="list" item="item" separator="," index="index">
+            ( #{item.shopcar_id},
+            #{item.user_carid},
+            #{item.shopcardingdan},
+            #{item.shopcarname},
+            #{item.shopcarcounts},
+            #{item.shopcarprice},
+            #{item.shopcarimage},
+            #{item.shopcaryuliu},
+            #{item.shopcar_money},
+            #{item.shopcaryuliu0},
+            #{item.column_11})
+        </foreach>
+
+    </insert>
+
+
+
+
+    <!--这里是批量删除-->
+    <delete id="deleteMeituanshopcarAll" parameterType="java.lang.String">
+        delete from shop_car where (shopcar_id) in
+        <foreach collection="list" item="item" open="(" close=")" separator=",">
+            ( #{item})
+        </foreach>
+    </delete>
+</mapper>

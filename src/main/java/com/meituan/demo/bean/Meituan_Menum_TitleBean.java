@@ -6,17 +6,14 @@ import java.io.Serializable;
 
 public class Meituan_Menum_TitleBean implements Serializable {
 
-    public Meituan_Menum_TitleBean(String id, String meiTuan_Name, String meiTuan_ImageruUrl) {
-        this.id = id;
-        MeiTuan_Name = meiTuan_Name;
-        MeiTuan_ImageruUrl = meiTuan_ImageruUrl;
+
+    public String getMenumtitile() {
+        return menumtitile;
     }
 
-    public Meituan_Menum_TitleBean() {
+    public void setMenumtitile(String menumtitile) {
+        this.menumtitile = menumtitile;
     }
-
-    private  String id;
-    private  String MeiTuan_Name;
 
     public String getId() {
         return id;
@@ -26,21 +23,25 @@ public class Meituan_Menum_TitleBean implements Serializable {
         this.id = id;
     }
 
-    public String getMeiTuan_Name() {
-        return MeiTuan_Name;
+    public String getMenumimage() {
+        return menumimage;
     }
 
-    public void setMeiTuan_Name(String meiTuan_Name) {
-        MeiTuan_Name = meiTuan_Name;
+    public void setMenumimage(String menumimage) {
+        this.menumimage = menumimage;
     }
 
-    public String getMeiTuan_ImageruUrl() {
-        return MeiTuan_ImageruUrl;
+    public Meituan_Menum_TitleBean(String menumtitile, String id, String menumimage) {
+        this.menumtitile = menumtitile;
+        this.id = id;
+
+        this.menumimage = menumimage;
     }
 
-    public void setMeiTuan_ImageruUrl(String meiTuan_ImageruUrl) {
-        MeiTuan_ImageruUrl = meiTuan_ImageruUrl;
+    public Meituan_Menum_TitleBean() {
     }
 
-    private  String MeiTuan_ImageruUrl;
+    private  String menumtitile;
+    private  String id;
+    private  String menumimage;
 }
