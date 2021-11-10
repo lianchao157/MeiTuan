@@ -1,10 +1,11 @@
-package com.meituan.demo.bean;
+package com.meituan.demo.domain.result;
 
 import com.alibaba.fastjson.JSON;
-import com.meituan.demo.domain.Result;
-import com.meituan.demo.domain.ResultCode;
 
-public class GeneralResult implements Result {
+/**
+ * 一般的响应结果封装
+ */
+public class GeneralResult implements Result{
     private int code;
     private String msg;
     private Object data;
