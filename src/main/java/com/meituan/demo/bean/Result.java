@@ -1,4 +1,4 @@
-package com.meituan.demo.bean;
+//package com.meituan.demo.bean;
 
-public interface Result {
-}
+//public interface Result {
+//}

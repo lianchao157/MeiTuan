@@ -45,7 +45,7 @@ public class LoginByTokenController {
     }
 
     @ApiOperation(value = "token")
-    @RequestMapping(value = "/login", method = RequestMethod.POST) //  url 坚决不能重复
+    @RequestMapping(value = "/login",produces = "application/json; carset=utf-8", method = RequestMethod.POST) //  url 坚决不能重复
     @ResponseBody
     //登录
 //    @PostMapping("/login")

@@ -124,9 +124,31 @@
             <artifactId>httpclient</artifactId>
             <version>4.5.7</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.mobile</groupId>
+            <artifactId>spring-mobile-device</artifactId>
+        </dependency>
         <!--————————————————-->
         <!--版权声明：本文为CSDN博主「程序员欣宸」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。-->
         <!--原文链接：https://blog.csdn.net/boling_cavalry/article/details/86770023-->
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+        </dependency>
+        <dependency> <!-- 引入log4j2依赖 -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <!--————————————————-->
+        <!--版权声明：本文为CSDN博主「MonkeyKing-Sun」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。-->
+        <!--原文链接：https://blog.csdn.net/sunhuansheng/article/details/83376250-->
     </dependencies>
 
 
