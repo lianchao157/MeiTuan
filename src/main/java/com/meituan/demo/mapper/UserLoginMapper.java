@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserLoginMapper {
-    @Select("select * from userinfobyweb where username=username")
+    @Select("select * from userinfobyweb where username=#{username}")
     User findByUsernametest(@Param("username") String username);//  查询所有
 
 
