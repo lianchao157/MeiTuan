@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface Video_Mapper {
-    @Select("select * from video where VideoId=VideoId")
+    @Select("select * from video where VideoId=#{VideoId}")
     VideoInfoEntity findByUsernametest(@Param("VideoId") String VideoId);//  查询所有
 
 
