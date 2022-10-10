@@ -52,12 +52,14 @@ public class LoginByTokenController {
     public Object login(User user) {
         JSONObject jsonObject = new JSONObject();
         User userForBase = userService.findByUsername(user);
-        userForBase.setUsername("3");
-        userForBase.setUsertel("3");
+
         if (userForBase == null) {
             jsonObject.put("message", "登录失败,用户不存在");
             return jsonObject;
         } else {
+
+            userForBase.setUsername(user.getUsername());
+            userForBase.setUsertel(user.getUsertel());
 //            if (!userForBase.getPassword().equals(user.getPassword())){
             if (!user.equals(user)) {
                 jsonObject.put("message", "登录失败,密码错误");
